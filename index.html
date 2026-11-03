@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>엔클 바우처 Q&amp;A</title>
+<meta name="description" content="NKCLC(엔클) 자가 NK세포 서비스 이용권(바우처) 전환 사전 신청 자주 묻는 질문">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+/* 시니어용 밝은 화면 — 큰 글씨, 높은 대비, 큰 터치 영역. 다크모드 없이 항상 밝은 배경 */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#111827; --muted:#374151; --line:#cfd6e0;
+  --hero:#eaf2ff; --hero-line:#bcd3f5; --navy:#14213d;
+  --accent:#b93c0b; --accent-soft:#fff1e3; --blue:#1d4ed8; --kakao:#fee500; --kakao-ink:#191600;
+  --f:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:20px;line-height:1.75;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px;
+  word-break:keep-all;overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+main{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+h1,h2{margin:0;text-wrap:balance}
+p{margin:0}
+b{font-weight:900}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+.hero{background:var(--hero);border:2px solid var(--hero-line);color:var(--navy);border-radius:20px;padding:22px 18px;display:flex;flex-direction:column;gap:8px;text-align:center}
+.hero .ev{font-size:16px;color:var(--muted);font-weight:700}
+.hero h1{font-size:30px;font-weight:900;line-height:1.35}
+.hero .sub{font-size:18px;color:var(--accent);font-weight:900}
+
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quick>a,.quick>div{background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:16px;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;gap:4px}
+.quick>a{border-color:var(--blue);background:#f0f5ff}
+.quick .k{font-size:17px;color:var(--muted);font-weight:700}
+.quick .v{font-size:22px;font-weight:900}
+.quick a .v{color:var(--blue)}
+.quick .full{grid-column:1/-1}
+.dates{display:flex;flex-direction:column;gap:4px;font-size:20px;font-weight:700}
+.dates b{color:var(--accent)}
+.note{font-size:17px;color:var(--muted)}
+
+nav{display:flex;flex-wrap:wrap;gap:10px}
+nav a{font-size:18px;font-weight:700;color:var(--ink);background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:10px 18px;min-height:48px;display:inline-flex;align-items:center;text-decoration:none}
+
+section{display:flex;flex-direction:column;gap:14px;scroll-margin-top:16px}
+section h2{font-size:24px;font-weight:900;padding:4px 0 4px 12px;border-left:6px solid var(--navy)}
+.qa{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:18px 16px 20px;display:flex;flex-direction:column;gap:14px}
+.q{display:flex;gap:12px;font-size:21px;font-weight:900;line-height:1.5;color:var(--navy)}
+.q::before{content:"Q";flex:none;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-size:19px;font-weight:900;display:grid;place-items:center}
+.a{display:flex;gap:12px;padding-top:14px;border-top:1px dashed var(--line)}
+.a::before{content:"A";flex:none;width:36px;height:36px;border-radius:50%;background:var(--accent-soft);color:var(--accent);border:2px solid var(--accent);font-size:19px;font-weight:900;display:grid;place-items:center}
+.a>div{display:flex;flex-direction:column;gap:10px;min-width:0;font-size:20px}
+
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:19px;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--line);padding:10px 6px;text-align:left}
+th{color:var(--muted);font-weight:700;font-size:17px;background:#f3f5f8}
+td{font-weight:700}
+td.c{color:var(--blue);font-weight:900;text-align:right}
+th.c{text-align:right}
+.ex{background:var(--accent-soft);border:2px solid #f3c9a6;border-radius:14px;padding:12px 14px;font-size:19px}
+.ex b{color:var(--accent)}
+
+.kakao{display:block;text-align:center;background:var(--kakao);color:var(--kakao-ink);font-weight:900;font-size:22px;border-radius:16px;padding:18px;text-decoration:none;border:2px solid #e6cf00}
+.foot{display:flex;flex-direction:column;gap:8px;font-size:17px;color:var(--muted);line-height:1.65}
+.upd{font-size:17px;color:var(--muted);text-align:right}
+.top{align-self:center;font-size:19px;font-weight:700;color:var(--blue);text-decoration:none;border:2px solid var(--blue);border-radius:999px;padding:10px 24px;min-height:48px;display:inline-flex;align-items:center;background:var(--surface)}
+@media (max-width:480px){
+  .quick{grid-template-columns:1fr}.hero h1{font-size:27px}
+  .qa{padding:16px 14px 18px}
+  .a{flex-direction:column;gap:8px}
+  .a::before{width:32px;height:32px;font-size:17px}
+}
+</style>
+</head>
+<body>
+<main id="top">
+  <header class="hero">
+    <span class="ev">"자가 NK세포 저위험군 분류 식약처 고시 시행 기념"</span>
+    <h1>엔클 바우처 전환<br>자주 묻는 질문</h1>
+    <span class="sub">자가 NK세포 서비스 이용권(바우처)</span>
+  </header>
+
+  <div class="quick">
+    <a href="https://naver.me/G2YbZwW1" target="_blank" rel="noopener">
+      <span class="k">신청서</span><span class="v">신청서 바로가기 →</span>
+    </a>
+    <div>
+      <span class="k">바우처 1회</span><span class="v">1,650만 원</span>
+      <span class="note">엔클 1개 = 29,700원 기준</span>
+    </div>
+    <div class="full">
+      <span class="k">신청 기간</span>
+      <div class="dates">
+        <span>1차 : <b>연장 진행 중</b></span>
+        <span>2차 : 11월 30일(월)까지</span>
+        <span>3차 : 12월 31일(목)까지</span>
+      </div>
+      <span class="note">1차 연장 마감일은 공지를 확인해 주세요.</span>
+    </div>
+  </div>
+
+  <nav aria-label="분류 바로가기">
+    <a href="#timing">신청 시기</a>
+    <a href="#ratio">전환비율</a>
+    <a href="#amount">보유수량·계정</a>
+    <a href="#cancel">신청·철회</a>
+    <a href="#use">바우처 사용</a>
+    <a href="#trade">코인 거래</a>
+  </nav>
+
+  <section id="timing">
+    <h2>신청 시기</h2>
+    <div class="qa">
+      <p class="q">이번에 신청하지 않고 내년에 신청하거나 사용해도 되나요?</p>
+      <div class="a"><div>
+        <p>신청은 이번에 <b>12월 31일까지만</b> 받고 종결합니다. 이후에는 신청하실 수 없습니다.</p>
+        <p>바우처 실제 사용은 치료 승인 후에 가능하며, 사용 시점은 확정되는 대로 안내드리겠습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">1차·2차·3차는 무슨 뜻인가요?</p>
+      <div class="a"><div>
+        <p>신청하는 시기입니다. 1차는 연장 진행 중이며, 2차는 11월 30일, 3차는 12월 31일까지입니다.</p>
+        <p>신청 차수는 실제 신청서 접수일 기준으로 정해집니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">먼저 신청하는 것이 유리한가요?</p>
+      <div class="a"><div>
+        <p>네. 같은 보유수량이라도 일찍 신청하실수록 엔클 비율이 높아져 현금 부담이 줄어듭니다.</p>
+        <p class="ex">예) 엔클 <b>15,500개</b>를 가지고 계시면<br>1차 → 엔클 90% (현금 165만 원)<br>2차 → 엔클 80% (현금 330만 원)<br>3차 → 엔클 70% (현금 495만 원)</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="ratio">
+    <h2>전환비율</h2>
+    <div class="qa">
+      <p class="q">%(퍼센트)는 무슨 뜻인가요? 엔클과 현금은 얼마씩인가요?</p>
+      <div class="a"><div>
+        <p>바우처 1회(1,650만 원)를 엔클로 얼마, 현금으로 얼마 내는지 나눈 비율입니다.</p>
+        <div class="tbl"><table>
+          <thead><tr><th>엔클 비율</th><th>엔클</th><th class="c">현금</th></tr></thead>
+          <tbody>
+            <tr><td>엔클 100%</td><td>555개</td><td class="c">0원</td></tr>
+            <tr><td>엔클 90%</td><td>500개</td><td class="c">165만 원</td></tr>
+            <tr><td>엔클 80%</td><td>444개</td><td class="c">330만 원</td></tr>
+            <tr><td>엔클 70%</td><td>388개</td><td class="c">495만 원</td></tr>
+            <tr><td>엔클 60%</td><td>333개</td><td class="c">660만 원</td></tr>
+            <tr><td>엔클 50%</td><td>277개</td><td class="c">825만 원</td></tr>
+          </tbody>
+        </table></div>
+        <p>적용되는 비율은 보유수량과 신청 시기에 따라 정해집니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">안내표의 숫자(예: 15,000개)는 무엇인가요?</p>
+      <div class="a"><div>
+        <p>해당 전환비율을 적용받기 위해 퍼플월렛에 보유하고 계셔야 하는 최소 기준 수량입니다.</p>
+        <p>기준 수량은 차감되는 수량이 아니며, 이 수량을 넘는 엔클을 바우처로 전환하실 수 있습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">엔클을 1,000개 가지고 있으면 바우처를 신청할 수 없나요?</p>
+      <div class="a"><div>
+        <p>1,000개를 가지고 계시면 <b>1차 엔클 50%</b> 조건으로 신청하실 수 있습니다.</p>
+        <p>미리 전환비율에 대한 자격을 획득하신 후, 사용하시는 시점에 엔클 50% : 현금 50%를 지급하여 이용하실 수 있습니다.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="amount">
+    <h2>보유수량·계정</h2>
+    <div class="qa">
+      <p class="q">스테이킹 중인 엔클도 보유수량에 포함되나요?</p>
+      <div class="a"><div>
+        <p>네. 스테이킹 중인 엔클도 보유수량에 포함됩니다.</p>
+        <p>신청서에는 스테이킹 수량을 포함한 전체 보유수량을 적어 주세요.</p>
+        <p>휴대폰에서 퍼플월렛 보유수량 화면을 캡처하시면 스테이킹 수량까지 함께 확인됩니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">여러 계정의 엔클을 한 계정으로 옮길 수 있나요?</p>
+      <div class="a"><div>
+        <p>퍼플월렛에서 NKCLC는 자유롭게 수량 이동이 가능합니다.</p>
+        <p>필요하시면 한 계정으로 합산하신 후 신청하시면 됩니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">마스터.M(NKCLM) 코인은 어떻게 되나요?</p>
+      <div class="a"><div>
+        <p>이번 사전 신청은 <b>NKCLC(엔클)만</b> 대상입니다.</p>
+        <p>곧 NKCLM도 공지가 있을 예정이며, 관련 내용은 별도로 안내드리겠습니다.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="cancel">
+    <h2>신청·철회</h2>
+    <div class="qa">
+      <p class="q">바우처 신청은 의무인가요? 안 하면 나중에 치료받을 때는 어떻게 되나요?</p>
+      <div class="a"><div>
+        <p>바우처 전환은 의무가 아니며, 원하시는 분에 한하여 신청하시면 됩니다.</p>
+        <p>다만 이번 전환비율 조건은 <b>12월 31일까지</b> 신청하신 분께만 적용되며, 그 뒤에는 신청을 받지 않습니다.</p>
+        <p>나중에 치료받을 때도 엔클 1개당 최소 29,700원으로 인정하여 사용하실 수 있습니다.</p>
+        <p>단, 엔클 100% 사용 등의 혜택은 그때의 정책에 따라 변동될 수 있습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">바우처로 교환하지 않으면 앞으로 엔클은 사용할 수 없나요?</p>
+      <div class="a"><div>
+        <p>바우처 전환은 선택 사항입니다.</p>
+        <p>전환하지 않으셔도 보유하신 엔클은 퍼플월렛에 그대로 남아 있습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">신청 후 마음이 바뀌면 어떻게 되나요?</p>
+      <div class="a"><div>
+        <p>신청 후 언제든지 바우처 사용을 포기하고 신청을 철회하실 수 있습니다.</p>
+        <p>철회 후에는 거래소 매도, 양수도 등을 진행하실 수 있습니다.</p>
+        <p>단, 철회 후 같은 기간 조건으로 다시 신청하실 수는 없습니다.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="use">
+    <h2>바우처 사용</h2>
+    <div class="qa">
+      <p class="q">바우처는 언제부터, 어느 병원에서 사용할 수 있나요?</p>
+      <div class="a"><div>
+        <p>바우처는 국내 법령 및 고시에 따른 치료 승인이 완료된 후부터 사용하실 수 있습니다.</p>
+        <p>이용 가능한 의료기관은 승인 이후 <b>첨단재생의료실시기관</b>에서 가능하며, 사용 가능 시점과 함께 별도로 안내드리겠습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">바우처는 본인이 꼭 써야 하나요? 다른 분께 넘길 수 있나요?</p>
+      <div class="a"><div>
+        <p>사용 시점에 신청서에 바우처를 사용하실 분을 따로 적으실 수 있어서, 가족 등 다른 분이 사용하시도록 신청하실 수 있습니다.</p>
+        <p>따라서 타인에게 재판매도 가능합니다.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="trade">
+    <h2>코인 거래</h2>
+    <div class="qa">
+      <p class="q">신청하지 않은 상태에서 거래소에서 거래해도 되나요?</p>
+      <div class="a"><div>
+        <p>네. 바우처 전환과 거래소 매도는 회원님이 자유롭게 선택하실 수 있습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">신청한 뒤에 엔클을 팔 수 있나요?</p>
+      <div class="a"><div>
+        <p>사전 신청 후에도 언제든 신청을 철회하실 수 있고, 철회한 뒤에는 거래소 매도나 양수도를 하실 수 있습니다.</p>
+        <p>단, 철회 후 같은 기간 조건으로 다시 신청하실 수는 없습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">다른 분과 코인을 거래하면 어떻게 되나요?</p>
+      <div class="a"><div>
+        <p>회원님 간의 개인 코인 거래는 회사가 관여하거나 보증하지 않습니다.</p>
+      </div></div>
+    </div>
+    <div class="qa">
+      <p class="q">앞으로 다른 계획이 있나요?</p>
+      <div class="a"><div>
+        <p>향후 계획은 확정되는 대로 공식 공지로 안내드리겠습니다.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <a class="kakao" href="http://pf.kakao.com/_CBVTn/chat" target="_blank" rel="noopener">더 궁금하신 점은<br>NKCL 카카오톡 채널로 문의해 주세요</a>
+
+  <div class="foot">
+    <p>※ 신청서 제출만으로 바우처 전환이 확정되지는 않으며, 확인 후 개별로 안내드립니다.</p>
+    <p>※ NKCLC는 생태계 내 서비스 이용을 위한 수단이며, 현금과 동일한 기능을 가지지 않습니다.</p>
+    <p>※ 전환된 서비스 이용권(바우처)은 국내 법령 및 식약처 고시에 따라 승인 완료 후, 본인이 자율적으로 선택한 의료기관에서 플랫폼 서비스를 적용받는 방식으로 운영됩니다.</p>
+  </div>
+  <p class="upd">최종 업데이트 : 2026년 11월 3일 · NKCLC</p>
+  <a class="top" href="#top">↑ 맨 위로</a>
+</main>
+</body>
+</html>
